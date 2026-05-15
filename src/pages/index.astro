@@ -16,7 +16,13 @@ const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+const mugsangPosts = sortedPosts.filter(({ data }) =>
+  data.tags?.includes("묵상")
+);
+const gemPosts = sortedPosts.filter(({ data }) =>
+  data.tags?.includes("성경공부 with Gem")
+);
 ---
 
 <Layout>
@@ -45,7 +51,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         성경을 읽다가 드는 생각들, 그리고 AI와 함께 만들어가는 것들을 기록하는 공간이에요.
       </p>
       {
-        // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
             <Socials />
@@ -58,10 +63,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       featuredPosts.length > 0 && (
         <section
           id="featured"
-          class:list={[
-            "pt-12 pb-6",
-            { "border-b border-border": recentPosts.length > 0 },
-          ]}
+          class:list={["pt-12 pb-6", "border-b border-border"]}
         >
           <h2 class="text-2xl font-semibold tracking-wide">주목할 글</h2>
           <ul>
@@ -74,22 +76,55 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     }
 
     {
-      recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">최근 글</h2>
+      mugsangPosts.length > 0 && (
+        <section
+          id="mugsang"
+          class:list={["pt-12 pb-6", "border-b border-border"]}
+        >
+          <h2 class="text-2xl font-semibold tracking-wide">묵상</h2>
           <ul>
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h3" {...data} />
-            )}
+            {mugsangPosts
+              .slice(0, SITE.postPerIndex)
+              .map(data => (
+                <Card variant="h3" {...data} />
+              ))}
           </ul>
+          <div class="my-4 text-right">
+            <LinkButton href="/tags/묵상/">
+              더 보기
+              <IconArrowRight class="inline-block rtl:-rotate-180" />
+            </LinkButton>
+          </div>
+        </section>
+      )
+    }
+
+    {
+      gemPosts.length > 0 && (
+        <section id="gem" class="pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">
+            성경공부 with Gem
+          </h2>
+          <ul>
+            {gemPosts
+              .slice(0, SITE.postPerIndex)
+              .map(data => (
+                <Card variant="h3" {...data} />
+              ))}
+          </ul>
+          <div class="my-4 text-right">
+            <LinkButton href="/tags/성경공부-with-gem/">
+              더 보기
+              <IconArrowRight class="inline-block rtl:-rotate-180" />
+            </LinkButton>
+          </div>
         </section>
       )
     }
 
     <div class="my-8 text-center">
       <LinkButton href="/posts/">
-        글 목록
+        전체 글 보기
         <IconArrowRight class="inline-block rtl:-rotate-180" />
       </LinkButton>
     </div>
