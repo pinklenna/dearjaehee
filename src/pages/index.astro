@@ -18,7 +18,7 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const mugsangPosts = sortedPosts.filter(({ data }) =>
-  data.tags?.includes("묵상")
+  data.tags?.includes("Thoughts")
 );
 const gemPosts = sortedPosts.filter(({ data }) =>
   data.tags?.includes("with Gem")
@@ -81,7 +81,7 @@ const gemPosts = sortedPosts.filter(({ data }) =>
           id="mugsang"
           class:list={["pt-12 pb-6", "border-b border-border"]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide">묵상</h2>
+          <h2 class="text-2xl font-semibold tracking-wide">Thoughts</h2>
           <ul>
             {mugsangPosts
               .slice(0, SITE.postPerIndex)
@@ -90,7 +90,7 @@ const gemPosts = sortedPosts.filter(({ data }) =>
               ))}
           </ul>
           <div class="my-4 text-right">
-            <LinkButton href="/tags/묵상/">
+            <LinkButton href="/tags/thoughts/">
               더 보기
               <IconArrowRight class="inline-block rtl:-rotate-180" />
             </LinkButton>

@@ -1,7 +1,7 @@
 ---
 title: "다윗의 인구조사와 시스템 관리자"
 pubDatetime: 2026-05-15T00:00:00Z
-tags: ["묵상"]
+tags: ["Thoughts"]
 description: "사무엘하 24장을 읽으며 생긴 질문들과 깨달음. 실수 이후가 더 중요하다."
 ---
 

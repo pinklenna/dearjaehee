@@ -1,7 +1,7 @@
 ---
 title: "실력과 영성에 관하여"
 pubDatetime: 2026-04-23T00:00:00Z
-tags: ["묵상"]
+tags: ["Thoughts"]
 description: "사무엘상 15-16장, 지는 사울과 뜨는 다윗 사이에서 글을 쓰는 동력에 대해 묻다."
 ---
 

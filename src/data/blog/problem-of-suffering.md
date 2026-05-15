@@ -1,7 +1,7 @@
 ---
 title: "고통의 문제"
 pubDatetime: 2026-04-22T00:00:00Z
-tags: ["묵상"]
+tags: ["Thoughts"]
 description: "고통받는 이들의 고통을 왜 내버려 두시는 걸까. 사무엘상 13-14장을 읽다가."
 ---
 
