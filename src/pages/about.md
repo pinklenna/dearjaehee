@@ -3,35 +3,30 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+안녕하세요, 재희예요.
 
-![Astro Paper](public/astropaper-og.jpg)
+성경을 읽다가 드는 생각들, 그리고 AI와 함께 만들어가는 것들을 여기에 기록하고 있어요.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+---
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+## 이 블로그에 대해
 
-## Features
+**묵상** — 아침에 성경을 펴면 어떤 날은 위로가 오고, 어떤 날은 질문이 쌓여요.
+그 질문들을 흘려보내기 아쉬워서 씁니다. 신학적으로 옳고 그름보다는,
+솔직하게 드는 의문과 그 안에서 만나는 것들이에요.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+**성경공부 with Gem** — Gemini와 나누는 성경 대화예요.
+고고학, 역사, 과학의 눈으로 성경을 읽으면 어떻게 보이는지 탐구한 기록입니다.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+**작업 노트** *(준비 중)* — AI와 함께 이것저것 만들어보는 과정이에요.
+이 사이트를 만든 것도 그 일부고요.
 
-and so much more.
+---
 
-## Show your support
+## 상담창구
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+조용히 고민을 들어드리는 공간도 있어요. → [Letter](/letter)
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+## 연락
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+📧 [jaehee.letter@gmail.com](mailto:jaehee.letter@gmail.com)
