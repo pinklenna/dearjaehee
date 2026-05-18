@@ -29,6 +29,13 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 const params = Astro.params;
 const { tag } = params;
 const { page, tagName } = Astro.props;
+
+const tagDescriptions: Record<string, string> = {
+  thoughts: "성경을 읽고 내 마음에 남아있는 이야기.",
+  "with-gem": "제미나이와 성경을 읽으며 나눈 대화들.",
+  lab: "툴을 고르고, 연결하고, 실패하고, 다시 만드는 기록들.",
+};
+const pageDesc = tagDescriptions[tag] ?? `All the articles with the tag "${tagName}".`;
 ---
 
 <Layout title={`Tag: ${tagName} | ${SITE.title}`}>
@@ -36,7 +43,7 @@ const { page, tagName } = Astro.props;
   <Main
     pageTitle={[`Tag:`, `${tagName}`]}
     titleTransition={tag}
-    pageDesc={`All the articles with the tag "${tagName}".`}
+    pageDesc={pageDesc}
   >
     <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
     <ul>
