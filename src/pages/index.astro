@@ -52,8 +52,14 @@ const gemPosts = sortedPosts.filter(({ data }) =>
       </p>
       {
         SOCIALS.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
+          <div class="mt-4 flex max-sm:flex-col sm:items-center sm:gap-4">
             <Socials />
+            <a
+              href="/letter"
+              class="mt-2 sm:mt-0 text-sm font-medium hover:text-accent transition-colors"
+            >
+              고민편지 보내기 →
+            </a>
           </div>
         )
       }
